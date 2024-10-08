@@ -1,0 +1,324 @@
+<!---
+ .----------------.    .----------------.    .----------------.    .----------------. 
+| .--------------. |  | .--------------. |  | .--------------. |  | .--------------. |
+| |  ___  ____   | |  | |     _____    | |  | |  ____  ____  | |  | |     ____     | |
+| | |_  ||_  _|  | |  | |    |_   _|   | |  | | |_  _||_  _| | |  | |   .'    `.   | |
+| |   | |_/ /    | |  | |      | |     | |  | |   \ \  / /   | |  | |  /  .--.  \  | |
+| |   |  __'.    | |  | |      | |     | |  | |    \ \/ /    | |  | |  | |    | |  | |
+| |  _| |  \ \_  | |  | |     _| |_    | |  | |    _|  |_    | |  | |  \  `--'  /  | |
+| | |____||____| | |  | |    |_____|   | |  | |   |______|   | |  | |   `.____.'   | |
+| |              | |  | |              | |  | |              | |  | |              | |
+| '--------------' |  | '--------------' |  | '--------------' |  | '--------------' |
+ '----------------'    '----------------'    '----------------'    '----------------' 
+-->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="stylesheet" href="./script/css/styles.css">
+
+    <!-- =====BOX ICONS===== -->
+    <link href='https://cdn.jsdelivr.net/npm/boxicons@2.0.5/css/boxicons.min.css' rel='stylesheet'>
+    <script src="https://unpkg.com/boxicons@2.0.9/dist/boxicons.js"></script>
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css"
+        integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
+
+    <title>Portfolio | Kyxzy </title>
+</head>
+
+<body>
+    <!--===== HEADER =====-->
+    <header class="l-header">
+        <nav class="nav bd-grid">
+            <div>
+                <a href="#" class="nav__logo">Tumelo Mphahlele</a>
+            </div>
+
+            <div class="nav__menu" id="nav-menu">
+                <ul class="nav__list">
+                    <li class="nav__item"><a href="#home" class="nav__link active">Home</a></li>
+                    <li class="nav__item"><a href="#about" class="nav__link">About</a></li>
+                    <li class="nav__item"><a href="#skills" class="nav__link">Skills</a></li>
+                    <li class="nav__item"><a href="#contact" class="nav__link">Contact</a></li>
+                </ul>
+            </div>
+
+            <div class="nav__toggle" id="nav-toggle">
+                <i class='bx bx-menu'></i>
+            </div>
+        </nav>
+    </header>
+
+    <main class="l-main">
+        <!--===== HOME =====-->
+        <section class="home bd-grid" id="home">
+            <div class="home__data">
+                <h1 class="home__title">Hi,<br>I'am <span class="home__title-color">Tumelo Mphahlele</span><br> Ordinary
+                    Students</h1>
+
+                <a href="#" class="button">CV</a>
+            </div>
+
+            <div class="home__social">
+                <a href="" class="home__social-icon"><i class='bx bxl-linkedin'></i></a>
+                <a href="" class="home__social-icon"><i class='bx bxl-behance'></i></a>
+                <a href="https://github.com/Kyxzy" class="home__social-icon"><i class='bx bxl-github'></i></a>
+            </div>
+
+            <div class="home__img">
+                <img id="profilePic" src="./img/Untitled design(8).png" alt="Profile Picture">
+                <input type="file" id="fileInput" accept="image/*" style="display: none;">
+                <label for="fileInput" class="upload-button">Change Profile Picture</label>
+            </div>
+        </section>
+
+        <!--===== ABOUT =====-->
+        <section class="about section " id="about">
+            <h2 class="section-title">About</h2>
+
+            <div class="about__container bd-grid">
+                <div class="about__img">
+                    <img src="./img/Untitled design(8).png" alt="">
+                </div>
+
+                <div>
+                    <h2 class="about__subtitle">I'am Tumelo Mphahlele</h2>
+                    <p class="about__text">A dedicated and ambitious Bachelor of Science in Computer Science student at
+                        the University of Limpopo, I am passionate about leveraging technology to solve real-world
+                        problems. With a strong foundation in programming languages such as Python, JavaScript, and C++,
+                        I have developed skills in web development, database management, and software engineering.</p>
+                </div>
+            </div>
+        </section>
+
+        <!--===== SKILLS =====-->
+        <section class="skills section" id="skills">
+            <h2 class="section-title">Skills</h2>
+
+            <div class="skills__container bd-grid">
+                <div>
+                    <h2 class="skills__subtitle">Professional Skills</h2>
+                    <p class="skills__text">It's about my skills. Not much I can only a few. But right now I'm still
+                        honing it, so I can get what I want</p>
+                    <div class="skills__data" id="skills-list">
+                        <!-- Skills will be dynamically inserted here -->
+                    </div>
+                    <form id="skill-form">
+                        <input type="text" id="skill-name" placeholder="Skill Name" required>
+                        <input type="number" id="skill-percentage" placeholder="Skill Percentage (0-100)" min="0"
+                            max="100" required>
+                        <button type="submit">Add Skill</button>
+                    </form>
+                </div>
+
+                <div>
+                    <img src="./img/Untitled design(8).png" alt="" class="skills__img">
+                </div>
+            </div>
+        </section>
+
+
+        <style>
+            .skills__container {
+                display: flex;
+                flex-direction: column;
+                /* Stack items vertically */
+            }
+
+            .skills__data {
+                display: flex;
+                align-items: center;
+                margin: 10px 0;
+                /* Spacing between skills */
+            }
+
+            .skills__names {
+                flex: 1;
+                /* Allow the names to take available space */
+                display: flex;
+                align-items: center;
+            }
+
+            .skills__icon {
+                font-size: 24px;
+                /* Adjust icon size */
+                margin-right: 10px;
+                /* Spacing between icon and skill name */
+            }
+
+            .skills__bar {
+                height: 5px;
+                /* Bar height */
+                background-color: #4caf50;
+                /* Bar color */
+                border-radius: 5px;
+                /* Rounded edges */
+                margin: 0 10px;
+                /* Spacing around the bar */
+                flex: 2;
+                /* Allow the bar to take more space */
+            }
+
+            .skills__percentage {
+                min-width: 50px;
+                /* Minimum width for percentage text */
+                text-align: right;
+                /* Align text to the right */
+            }
+
+            button {
+                background-color: #007bff;
+                /* Button background color */
+                color: white;
+                /* Button text color */
+                border: none;
+                /* Remove border */
+                border-radius: 5px;
+                /* Rounded corners */
+                padding: 5px 10px;
+                /* Padding inside the button */
+                cursor: pointer;
+                /* Pointer cursor on hover */
+                margin-left: 10px;
+                /* Space between button and percentage text */
+                transition: background-color 0.3s;
+                /* Transition for hover effect */
+            }
+
+            button:hover {
+                background-color: #0056b3;
+                /* Darker shade on hover */
+            }
+
+            button:focus {
+                outline: none;
+                /* Remove outline on focus */
+            }
+
+            .skills__img {
+                width: 100%;
+                /* Responsive image */
+                max-width: 400px;
+                /* Limit the maximum width */
+                height: auto;
+                /* Maintain aspect ratio */
+            }
+
+            /* Adjust the layout for larger screens */
+            @media (min-width: 768px) {
+                .skills__container {
+                    flex-direction: row;
+                    /* Change to row layout on larger screens */
+                    justify-content: space-between;
+                    /* Space between skills and image */
+                }
+
+                .skills__data {
+                    flex-direction: column;
+                    /* Stack skills vertically in each data block */
+                }
+            }
+        </style>
+
+
+        <!--===== CONTACT =====-->
+        <section class="contact section" id="contact">
+            <h2 class="section-title">Contact</h2>
+
+            <div class="contact__container bd-grid">
+                <form action="" class="contact__form">
+                    <input type="text" placeholder="Name" class="contact__input">
+                    <input type="mail" placeholder="Email" class="contact__input">
+                    <textarea name="" id="" cols="0" rows="10" class="contact__input"></textarea>
+                    <input type="button" value="Send" class="contact__button button">
+                </form>
+            </div>
+        </section>
+    </main>
+
+    <!--===== FOOTER =====-->
+    <footer class="footer">
+        <p class="footer__title">Social Media</p>
+        <div class="footer__social">
+            <a href="https://wa.link/y9t5do" class="footer__icon" target="_blank"><i class='bx bxl-whatsapp'></i></a>
+            <a href="mailto:mphahleletumelofaith@gmail.com" class="footer__icon"><i class='bx bxs-envelope'></i></a>
+        </div>
+
+        <p>&#169; 2024 copyright all right reserved</p>
+    </footer>
+
+
+    <!--===== SCROLL REVEAL =====-->
+    <script src="https://unpkg.com/scrollreveal"></script>
+
+    <!--===== MAIN JS =====-->
+    <script src="./script/js/main.js    "></script>
+
+    <!---==== PARTICLES JS=====-->
+    <div id="particles-js"></div>
+    <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
+    <script>
+        particlesJS.load('particles-js', 'particles.json',
+            function () {
+                console.log('particles.json loaded...')
+            })
+    </script>
+    <script type="text/javascript" src="./script/js/app.js"></script>
+    <script type="text/javascript" src="./script/js/particles.js"></script>
+
+</body>
+
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!--Decode this : RkxBR3tsa3NqYWt0aW0yMDIyfQ==>

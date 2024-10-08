@@ -1,0 +1,239 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
+:root{
+    --background-color: #333647;
+    --pink-color: #f87652;
+    --secondary-color: #bbbbbb;
+}
+*{
+    font-family: 'Poppins', sans-serif;
+}
+
+body{
+    background-color: var(--background-color) !important;
+;
+}
+h1,h2,h3,h4,h5,h6,p,span,td,a{
+    cursor: pointer;
+}
+canvas.particles-js-canvas-el{
+    position: absolute;
+    height: 100% !important;
+    width: 100%;
+    top: 0;
+    right: 0;
+    left: 0;
+    z-index: -10000;
+    margin: 0px;
+}
+
+.hero_section .row{
+    display: flex;
+    align-items: center;
+    height: 100vh;
+}
+.hero_section .row h1,h2,h3,p{
+    color: white;
+}
+.hero_section .row h3{
+    font-size: 19px;
+    font-weight: 30px;
+    margin-bottom: 15px;
+
+}
+.hero_section .row h3::after{
+    content: '';
+    position: absolute;
+    text-align: center;
+    top: 10px;
+    width: 90px;
+    height: 2px;
+    background-color: white;
+    margin-left: 6px;
+}
+.hero_section .row h1{
+    font-size: 65px;
+    font-weight: 800;
+
+}.hero_section .row h2{
+    font-size: 20px;
+    font-weight: 100;
+    margin: 8px 0px;
+}
+.hero_section .row p{
+    font-size: 13px;
+    margin-top: 13px;
+    line-height: 21px;
+    color: var(--secondary-color);
+}
+.hero_section .row button{
+    border-radius: 10px;
+    font-size: 19px;
+    color: white;
+    background-color: var(--pink-color);
+    border: 3px solid var(--pink-color);
+    width: 113px;
+    font-family: 'Poppins', sans-serif;
+    margin-top: 10px;
+}
+.hero_section .row button:hover{
+    animation: swing;
+    animation-duration: 0.5s;
+    background: white;
+    color: black;
+    border-color: white;
+}
+.hero_section .row img{
+    width: 80%;
+    border-radius: 50%;
+}
+
+@media (max-width: 1200px) and (min-width: 993px){
+    .hero_section .row h1{
+        font-size: 58px;
+    }
+}
+@media (max-width: 993px) and (min-width: 763px){
+    .hero_section .row h1 {
+        font-size: 42px;
+    }
+    .hero_section .row h2{
+        font-size: 15px;
+    }
+    .hero_section .row p{
+        font-size: 11px;
+    }
+    .hero_section .row h3{
+        font-size: 15px;
+    }
+    .hero_section .row button{
+        font-size: 15px;
+    }
+}
+@media (max-width: 763px) and (min-width: 500px){
+    .hero_section {
+        margin: 55px 0px;
+    }
+    .hero_section .row h1 {
+        font-size: 46px;
+        text-align: center;
+    }
+    .hero_section .row h2{
+        font-size: 15px;
+        text-align: center;
+    }
+    .hero_section .row p{
+        font-size: 11px;
+        text-align: center;
+    }
+    .hero_section .btn_container{
+        justify-content: center;
+        text-align: center;
+    }
+    .hero_section .row h3{
+        font-size: 18px;
+        text-align: center;
+        margin-bottom: 0px;
+    }
+    .hero_section .row h3::after{
+        width: 0px;
+    }
+    .hero_section .btn_container button{
+        width: 100px;
+        height: 43px;
+        font-size: 15px;
+        text-align: center;
+    }
+    .hero_section img{
+        width: 60%;
+        margin-top: 20px;
+    }
+}
+
+
+
+
+
+
+.home__img {
+    position: relative; /* Position relative to place elements inside */
+}
+
+.home__img img {
+    width: 200px; /* Adjust size as needed */
+    height: auto; 
+    border-radius: 50%; /* Circular image */
+    display: block;
+    margin: 0 auto; /* Center the image */
+}
+
+.upload-button {
+    display: inline-block;
+    background: #007BFF; /* Bootstrap primary color */
+    color: white;
+    padding: 10px 15px;
+    border-radius: 5px;
+    text-align: center;
+    cursor: pointer;
+    position: absolute; /* Positioning over the image */
+    bottom: 10px; /* Adjust positioning */
+    left: 50%; /* Center horizontally */
+    transform: translateX(-50%); /* Center the button */
+    font-weight: bold;
+    transition: background 0.3s;
+}
+
+.upload-button:hover {
+    background: #0056b3; /* Darken on hover */
+}
+
+input[type="file"] {
+    display: none; /* Hide the default file input */
+}
+
+
+
+.home__img {
+    position: relative; /* To position the button inside the image */
+    display: inline-block; /* Ensure it takes only the space it needs */
+}
+
+.upload-button {
+    display: inline-block;
+    background-color: #007BFF; /* Primary color */
+    color: white; /* Text color */
+    padding: 10px 20px; /* Padding for the button */
+    border-radius: 5px; /* Rounded corners */
+    text-align: center; /* Center text */
+    cursor: pointer; /* Pointer cursor on hover */
+    position: absolute; /* Positioning over the image */
+    bottom: 10px; /* Adjust position */
+    left: 50%; /* Center horizontally */
+    transform: translateX(-50%); /* Center the button */
+    font-weight: bold; /* Bold text */
+    font-size: 1rem; /* Font size */
+    border: none; /* Remove default border */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Add shadow */
+    transition: background-color 0.3s, transform 0.3s; /* Smooth transitions */
+}
+
+/* Hover effect */
+.upload-button:hover {
+    background-color: #0056b3; /* Darken background on hover */
+    transform: translateX(-50%) translateY(-2px); /* Slight upward movement */
+}
+
+/* Active effect */
+.upload-button:active {
+    transform: translateX(-50%) translateY(1px); /* Move down on click */
+}
+
+/* Focus effect for accessibility */
+.upload-button:focus {
+    outline: none; /* Remove default focus outline */
+    box-shadow: 0 0 0 2px rgba(0, 123, 255, 0.5); /* Add focus outline */
+}
+
+/* Hide the default file input */
+input[type="file"] {
+    display: none; /* Hide the file input */
+}
